@@ -1,9 +1,10 @@
-
+import './MortgageMain';
+import { MortgageMain } from './MortgageMain';
 
 function MainContainer(){
 return(
 <div className="main-container">
-    Hello!!
+   <MortgageMain/>
 </div>
 );
 }

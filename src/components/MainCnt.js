@@ -1,7 +1,11 @@
+
+
 function MainContainer(){
 return(
-<div>
+<div className="main-container">
     Hello!!
 </div>
 );
 }
+
+export default MainContainer;

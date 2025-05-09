@@ -1,12 +1,20 @@
+/* MODULES */
+
+import React from 'react';
+
 /* CSS */
-import './Main.css';
+import './Global.css';
+import './Main.scss'
 /* COMPONENTS */
-import './components/MainCnt';
+import MainContainer from './components/MainCnt';
 
 
 
 function App() {
   return (
+    <main className='page'>
+      <MainContainer/>
+    </main>
     
   );
 }

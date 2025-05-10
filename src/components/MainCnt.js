@@ -1,4 +1,3 @@
-import './MortgageMain';
 import { MortgageMain } from './MortgageMain';
 
 function MainContainer(){

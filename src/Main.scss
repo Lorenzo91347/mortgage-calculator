@@ -5,6 +5,7 @@
    justify-content:center;
    height: 100vh;
    background-color: #f0f0f0;
+   
    .main-container{
       background-color: var(--slate-100);
       color:rgba(42, 132, 155, 0.855);
@@ -14,12 +15,29 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
+      
       .mortgage-main{
          background-color: #ffffff;
          display: flex;
          width: 840px;
          height:505px;
          border-radius: 25px;
+         align-items: center;
+         justify-content: center;
+
+         .mort-left{
+            flex-grow: 1;
+            height: 100%;
+         }
+
+         .mort-right{
+            flex-grow: 1;
+            height: 100%;
+            border-radius: 0px 25px 25px 85px;
+            border: 1px solid black;
+            background-color: var(--slate-900);
+         }
+         
          
       }
    };

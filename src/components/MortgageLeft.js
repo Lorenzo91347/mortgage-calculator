@@ -1,8 +1,8 @@
-
+import MortgageForm from "./MortgageForm";
 
 const MortgageLeft = () => {
   return (
-    <div className="mort-left">MortgageLeft</div>
+    <div className="mort-left"><MortgageForm/></div>
   )
 }
 

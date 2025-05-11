@@ -1,9 +1,11 @@
 import React from 'react'
 
-const MOrtgageResult = () => {
+const MortgageResult = () => {
   return (
-    <div>MOrtgageResult</div>
+    <div>
+      
+    </div>
   )
 }
 
-export default MOrtgageResult
+export default MortgageResult

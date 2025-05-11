@@ -8,7 +8,6 @@
    
    .main-container{
       background-color: var(--slate-100);
-      color:rgba(42, 132, 155, 0.855);
       width: 75rem;
       height: 53.125rem;
       display: flex;
@@ -26,12 +25,33 @@
          justify-content: center;
 
          .mort-left{
-            flex-grow: 1;
+            flex-basis: 50%;
+            flex-grow: 0;
+            flex-shrink: 0;
             height: 100%;
+            padding: 30px;
+
+            .form-top{
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               
+               button{
+                  border: none;
+                  background-color: transparent;
+                  font-size: 16px;
+                  color: grey;
+                  text-decoration: underline;
+                  font-weight: 700;
+                  
+               }
+            }
          }
 
          .mort-right{
-            flex-grow: 1;
+            flex-basis: 50%;
+            flex-grow: 0;
+             flex-shrink: 0;
             height: 100%;
             border-radius: 0px 25px 25px 85px;
             border: 1px solid black;

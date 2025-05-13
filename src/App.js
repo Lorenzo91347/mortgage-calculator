@@ -1,7 +1,3 @@
-/* MODULES */
-
-import React from 'react';
-
 /* CSS */
 import './Global.css';
 import './Main.scss'

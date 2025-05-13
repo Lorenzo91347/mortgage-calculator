@@ -7,7 +7,7 @@ const MortgageForm = () => {
         <h2>Mortgage Calculator</h2>
         <button>Clear All</button>
       </div>
-      <div>
+      <div className='mortgage-amount'>
         <label for='amount' className='label'>Mortage Amount</label>
         <div className='amount'>
           <i className='icon'>£</i>

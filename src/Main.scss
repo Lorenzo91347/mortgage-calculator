@@ -85,6 +85,10 @@
                   }
                }
             }
+            .mort-term-rate{
+               display: flex;
+               justify-content: space-between;
+            }
          }
 
          .mort-right{
@@ -102,3 +106,9 @@
    };
    
 }
+  .term-rate-field{
+                  border-radius: 5px;
+                  border: 1px solid grey;
+                  display: flex;
+                  align-items: center;
+                  }

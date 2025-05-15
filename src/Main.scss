@@ -23,18 +23,16 @@
    width: 840px;
    height:505px;
    border-radius: 25px;
-   align-items: center;
-   justify-content: center;
    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
 }
 
 .mort-left{
-   flex-basis: 50%;
-   flex-grow: 0;
-   flex-shrink: 0;
-   height: 100%;
-   padding: 30px;
+  margin: 30px 20px;
 }
+
+/* .mort-form{
+   
+} */
 
 .form-top{
    display: flex;
@@ -52,7 +50,7 @@ button{
 }
             
 .mortgage-amount{
-   margin-top: 15px;
+   margin: 15px auto 0;
 }
 
 .label{
@@ -65,16 +63,15 @@ button{
 }
 
 .amount{
-   width: 360px;
    height: 40px;
    border-radius: 5px;
    border: 1px solid grey;
    display: flex;
    align-items: center;
 }
-.icon{
-   min-width: 40px;
-   min-height: 100%;
+
+.icon-top{
+   padding: 8px 15px 8px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -83,6 +80,17 @@ button{
    background-color: var(--slate-100);
    border-top-left-radius: 5px;
    border-bottom-left-radius: 5px;
+}
+.icon{
+   padding: 8px 10px 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight:bold;
+   color: var(--slate-700);
+   background-color: var(--slate-100);
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
 }
 .input-field{
    height: 100%;
@@ -95,6 +103,7 @@ button{
 .mort-term-rate{
    display: flex;
    justify-content: space-between;
+   margin-top: 15px;
 }
          
 
@@ -117,5 +126,4 @@ button{
    border-radius: 5px;
    border: 1px solid grey;
    display: flex;
-   align-items: center;
 }

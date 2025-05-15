@@ -5,110 +5,117 @@
    justify-content:center;
    height: 100vh;
    background-color: #f0f0f0;
+}
    
-   .main-container{
-      background-color: var(--slate-100);
-      width: 75rem;
-      height: 53.125rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.main-container{
+   background-color: var(--slate-100);
+   width: 75rem;
+   height: 53.125rem;
+   display: flex;
+     align-items: center;
+   justify-content: center;
+}
      
       
-      .mortgage-main{
-         background-color: #ffffff;
-         display: flex;
-         width: 840px;
-         height:505px;
-         border-radius: 25px;
-         align-items: center;
-         justify-content: center;
-         box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
-
-         .mort-left{
-            flex-basis: 50%;
-            flex-grow: 0;
-            flex-shrink: 0;
-            height: 100%;
-            padding: 30px;
-
-            .form-top{
-               display: flex;
-               justify-content: space-between;
-               align-items: center;
-               
-               button{
-                  border: none;
-                  background-color: transparent;
-                  font-size: 16px;
-                  color: grey;
-                  text-decoration: underline;
-                  font-weight: 700;
-                  
-               }
-            }
-            .mortgage-amount{
-               margin-top: 15px;
-               .label{
-                  font-size: 14px;
-                  color: grey;
-                  display: block;
-                  margin-bottom: 10px;
-                  font-weight: 600;
-
-               }
-               .amount{
-                  width: 360px;
-                  height: 40px;
-                  border-radius: 5px;
-                  border: 1px solid grey;
-                  display: flex;
-                  align-items: center;
-                  .icon{
-                     min-width: 40px;
-                     min-height: 100%;
-                     display: flex;
-                     align-items: center;
-                     justify-content: center;
-                     font-weight:bold;
-                     color: var(--slate-700);
-                     background-color: var(--slate-100);
-                     border-top-left-radius: 5px;
-                     border-bottom-left-radius: 5px;
-                  }
-                  .input-field{
-                     width: calc(100% - 40px);
-                     height: 100%;
-                     border-top-right-radius: 5px;
-                     border-bottom-right-radius: 5px;
-                     border:none;
-                  }
-               }
-            }
-            .mort-term-rate{
-               display: flex;
-               justify-content: space-between;
-            }
-         }
-
-         .mort-right{
-            flex-basis: 50%;
-            flex-grow: 0;
-             flex-shrink: 0;
-            height: 100%;
-            border-radius: 0px 25px 25px 85px;
-            border: 1px solid black;
-            background-color: var(--slate-900);
-         }
-         
-         
-      }
-   };
-   
+.mortgage-main{
+   background-color: #ffffff;
+   display: flex;
+   width: 840px;
+   height:505px;
+   border-radius: 25px;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
 }
-  .term-rate-field{
-                  border-radius: 5px;
-                  border: 1px solid grey;
-                  display: flex;
-                  align-items: center;
-                  }
+
+.mort-left{
+   flex-basis: 50%;
+   flex-grow: 0;
+   flex-shrink: 0;
+   height: 100%;
+   padding: 30px;
+}
+
+.form-top{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+               
+button{
+   border: none;
+   background-color: transparent;
+   font-size: 16px;
+   color: grey;
+   text-decoration: underline;
+   font-weight: 700;
+}
+            
+.mortgage-amount{
+   margin-top: 15px;
+}
+
+.label{
+   font-size: 14px;
+   color: grey;
+   display: block;
+   margin-bottom: 10px;
+   font-weight: 600;
+
+}
+
+.amount{
+   width: 360px;
+   height: 40px;
+   border-radius: 5px;
+   border: 1px solid grey;
+   display: flex;
+   align-items: center;
+}
+.icon{
+   min-width: 40px;
+   min-height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight:bold;
+   color: var(--slate-700);
+   background-color: var(--slate-100);
+   border-top-left-radius: 5px;
+   border-bottom-left-radius: 5px;
+}
+.input-field{
+   height: 100%;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   border:none;
+}
+               
+            
+.mort-term-rate{
+   display: flex;
+   justify-content: space-between;
+}
+         
+
+.mort-right{
+   flex-basis: 50%;
+   flex-grow: 0;
+   flex-shrink: 0;
+   height: 100%;
+   border-radius: 0px 25px 25px 85px;
+   border: 1px solid black;
+   background-color: var(--slate-900);
+}
+         
+         
+      
+   
+   
+
+.term-rate-field{
+   border-radius: 5px;
+   border: 1px solid grey;
+   display: flex;
+   align-items: center;
+}

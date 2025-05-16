@@ -100,6 +100,9 @@ button{
 .field-box{
    width: 178px;
 }
+/* .radios-cnt{
+
+} */
 
 
 /*---------- 
@@ -137,7 +140,7 @@ FIELDS,ICONS AND MIX
    border:none;
    padding: 12px;
    font-weight: 900;
-   color: #314045;
+   color: #475f67;
 }
 .input-field-2{
    width: 100%;
@@ -146,7 +149,7 @@ FIELDS,ICONS AND MIX
    border:none;
    padding: 12px;
    font-weight: 900;
-   color: #314045;
+   color: #475f67;
 }
 
 .label{
@@ -155,6 +158,23 @@ FIELDS,ICONS AND MIX
    display: block;
    margin-bottom: 10px;
    font-weight: 600;
+}
+
+.radio-label{
+   font-size: 14px;
+   margin-left: 12px;
+   font-weight: 900;
+   color: #475f67;
+}
+
+.radio-single{
+   height: 40px;
+   border-radius: 5px;
+   border: 1px solid grey;
+   display: flex;
+   align-items: center;
+   margin-bottom: 5px;
+   padding: 20px;
 }
                
             

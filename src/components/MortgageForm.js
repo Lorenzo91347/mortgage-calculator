@@ -1,5 +1,12 @@
 import React from 'react'
 
+document.querySelectorAll('.radio-single input[type="checkbox"]').forEach((input) => {
+  input.addEventListener('change', () => {
+    const parent = input.closest('.radio-single');
+    parent.classList.toggle('checked', input.checked);
+  });
+});
+
 let amount = 0;
 let repayment = 0;
 let interest = 0;
@@ -40,11 +47,11 @@ const MortgageForm = () => {
         <label for='type' className='label'>Mortgage Type</label>
         <div className='radios-cnt'>
           <div className='radio-single'>
-            <input type='radio' value={repayment}></input>
+            <input type='checkbox' value={repayment}></input>
             <label for='repayment' className='radio-label'>Repayment</label>
           </div>
           <div className='radio-single'>
-            <input type='radio' value={interest}></input>
+            <input type='checkbox' value={interest}></input>
             <label for='interest' className='radio-label'>Interest Only</label>
           </div>
           

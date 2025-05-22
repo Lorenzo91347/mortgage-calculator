@@ -167,14 +167,37 @@ FIELDS,ICONS AND MIX
    color: #475f67;
 }
 
-.radio-single{
-   height: 40px;
-   border-radius: 5px;
-   border: 1px solid grey;
-   display: flex;
-   align-items: center;
-   margin-bottom: 5px;
-   padding: 20px;
+.radio-single {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 20px;
+  transition: background-color 0.3s;
+
+  input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+
+  input:checked {
+    width: 12px;
+    height: 12px;
+    outline: 3px solid yellow;
+    background-color: #afa74c;
+    border: 1px solid white;
+  }
+
+  &.checked {
+    background-color: #afa74c;
+  }
 }
                
             

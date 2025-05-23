@@ -1,11 +1,21 @@
 import React from 'react'
 
-document.querySelectorAll('.radio-single input[type="checkbox"]').forEach((input) => {
-  input.addEventListener('change', () => {
-    const parent = input.closest('.radio-single');
-    parent.classList.toggle('checked', input.checked);
-  });
-});
+const checkbox1 = document.getElementById('checkbox-1');
+const checkbox2 = document.getElementById('checkbox-2');
+
+function handleToggle(checkedInput, otherInput) {
+  if (checkedInput.checked) {
+    checkedInput.checked = true;
+    checkedInput.closest('.radio-single').classList.add('checked');
+
+    otherInput.checked = false;
+    otherInput.closest('.radio-single').classList.remove('checked');
+  } else {
+    checkedInput.closest('.radio-single').classList.remove('checked');
+  }
+};
+checkbox1.addEventListener('change', () => handleToggle(checkbox1, checkbox2));
+checkbox2.addEventListener('change', () => handleToggle(checkbox2, checkbox1));
 
 let amount = 0;
 let repayment = 0;
@@ -47,11 +57,11 @@ const MortgageForm = () => {
         <label for='type' className='label'>Mortgage Type</label>
         <div className='radios-cnt'>
           <div className='radio-single'>
-            <input type='checkbox' value={repayment}></input>
+            <input type='checkbox' id='checkbox-1' value={repayment}></input>
             <label for='repayment' className='radio-label'>Repayment</label>
           </div>
           <div className='radio-single'>
-            <input type='checkbox' value={interest}></input>
+            <input type='checkbox'id='checkbox-2' value={interest}></input>
             <label for='interest' className='radio-label'>Interest Only</label>
           </div>
           
@@ -61,4 +71,4 @@ const MortgageForm = () => {
   )
 }
 
-export default MortgageForm
+export default MortgageForm;

@@ -1,21 +1,6 @@
 import React from 'react'
+import { useEffect } from 'react';
 
-const checkbox1 = document.getElementById('checkbox-1');
-const checkbox2 = document.getElementById('checkbox-2');
-
-function handleToggle(checkedInput, otherInput) {
-  if (checkedInput.checked) {
-    checkedInput.checked = true;
-    checkedInput.closest('.radio-single').classList.add('checked');
-
-    otherInput.checked = false;
-    otherInput.closest('.radio-single').classList.remove('checked');
-  } else {
-    checkedInput.closest('.radio-single').classList.remove('checked');
-  }
-};
-checkbox1.addEventListener('change', () => handleToggle(checkbox1, checkbox2));
-checkbox2.addEventListener('change', () => handleToggle(checkbox2, checkbox1));
 
 let amount = 0;
 let repayment = 0;
@@ -23,6 +8,34 @@ let interest = 0;
 
 
 const MortgageForm = () => {
+   
+  useEffect(() => {
+    const checkbox1 = document.getElementById('checkbox-1');
+    const checkbox2 = document.getElementById('checkbox-2');
+
+    function handleToggle(checkedInput, otherInput) {
+      if (checkedInput.checked) {
+        checkedInput.checked = true;
+        checkedInput.closest('.radio-single')?.classList.add('checked');
+
+        otherInput.checked = false;
+        otherInput.closest('.radio-single')?.classList.remove('checked');
+      } else {
+        checkedInput.closest('.radio-single')?.classList.remove('checked');
+      }
+    }
+
+    if (checkbox1 && checkbox2) {
+      checkbox1.addEventListener('change', () => handleToggle(checkbox1, checkbox2));
+      checkbox2.addEventListener('change', () => handleToggle(checkbox2, checkbox1));
+
+      // Unmount
+      return () => {
+        checkbox1.removeEventListener('change', () => handleToggle(checkbox1, checkbox2));
+        checkbox2.removeEventListener('change', () => handleToggle(checkbox2, checkbox1));
+      };
+    }
+  }, []);
   return (
     <div className='mort-form'>
       <div className='form-top'>
@@ -66,6 +79,7 @@ const MortgageForm = () => {
           </div>
           
         </div>
+        <button type='submit'></button>
       </div>
     </div>
   )

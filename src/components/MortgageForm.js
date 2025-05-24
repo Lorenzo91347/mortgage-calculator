@@ -1,6 +1,8 @@
 import React from 'react'
 import { useEffect } from 'react';
 
+import CalcLogo from '../icons/icon-calculator.svg';
+
 
 let amount = 0;
 let repayment = 0;
@@ -40,7 +42,7 @@ const MortgageForm = () => {
     <div className='mort-form'>
       <div className='form-top'>
         <h2>Mortgage Calculator</h2>
-        <button>Clear All</button>
+        <button className='clear'>Clear All</button>
       </div>
 
       <div className='mortgage-amount'>
@@ -79,7 +81,10 @@ const MortgageForm = () => {
           </div>
           
         </div>
-        <button type='submit'></button>
+        <button className='submit' type='submit'>
+          <img src={CalcLogo} alt='calc-logo'/>
+          <span>Calculate Repayments</span>
+        </button>
       </div>
     </div>
   )

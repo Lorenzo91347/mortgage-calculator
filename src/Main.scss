@@ -63,7 +63,7 @@ CHILD CONTAINERS STYLING
    margin-bottom: 40px;
 }
                
-button{
+.clear{
    border: none;
    background-color: transparent;
    font-size: 16px;
@@ -86,7 +86,6 @@ button{
 
 .mort-term-rate{
    display: flex;
-   margin-top: 15px;
    justify-content: space-between;
 }
 
@@ -153,6 +152,7 @@ FIELDS,ICONS AND MIX
 }
 
 .label{
+   margin-top:15px;
    font-size: 14px;
    color: grey;
    display: block;
@@ -199,6 +199,22 @@ FIELDS,ICONS AND MIX
     background-color: #fafae0;
     border-color: yellow;
   }
+}
+
+.submit{
+   margin-top:25px;
+   width: 255px;
+   height: 45px;
+   border-radius: 25px;
+   background-color:var(--primary-lime);
+   border: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   font-weight: 900;
+   color: #3a4d53;
+   
 }
                
             

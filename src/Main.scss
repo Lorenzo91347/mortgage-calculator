@@ -46,8 +46,23 @@ MAIN CONTAINERS STYLING
    height: 100%;
    border-radius: 0px 25px 25px 85px;
    border: 1px solid black;
-   background-color: var(--slate-900);
+   background-color: #133040;
    width: 26.25rem;
+}
+
+.mort-result{
+   margin: 30px auto;
+   width: 360px;
+   h3{
+      color: white;
+   }
+   p{
+      margin-top: 15px;
+      color: #819eb0;
+      font-size: 12px;
+      line-height: 22px;
+      font-weight: 600;
+   }
 }
 
 
@@ -70,6 +85,7 @@ CHILD CONTAINERS STYLING
    color: grey;
    text-decoration: underline;
    font-weight: 700;
+   cursor: pointer;
 }
             
 .mortgage-amount{
@@ -99,9 +115,18 @@ CHILD CONTAINERS STYLING
 .field-box{
    width: 178px;
 }
-/* .radios-cnt{
+.result-box{
+   width: 350px;
+   height: 240px;
+   background-color: #0e2431;
+   margin-top: 30px;
+   border-radius: 2%;
+   box-shadow: 0 -5px 0 0 var(--primary-lime);
+   .result-nums{
+      padding: 15px;
 
-} */
+   }
+}
 
 
 /*---------- 
@@ -151,7 +176,7 @@ FIELDS,ICONS AND MIX
    color: #475f67;
 }
 
-.label{
+.amount-label{
    margin-top:15px;
    font-size: 14px;
    color: grey;
@@ -184,6 +209,7 @@ FIELDS,ICONS AND MIX
     height: 15px;
     border-radius: 50%;
     border: 1px solid black;
+    cursor: pointer;
    /*  margin-right: 10px; */
   }
 
@@ -201,6 +227,10 @@ FIELDS,ICONS AND MIX
   }
 }
 
+.calc-logo{
+   transition: filter 0.3s ease;
+}
+
 .submit{
    margin-top:25px;
    width: 255px;
@@ -214,8 +244,30 @@ FIELDS,ICONS AND MIX
    gap: 10px;
    font-weight: 900;
    color: #3a4d53;
+   &:hover{
+ color: var(--primary-lime);
+ background-color: #3a4d53;
+ transition: all 0.4s;
+ cursor:pointer;
+ .calc-logo{
+      filter: invert(75%) sepia(100%) saturate(383%) hue-rotate(7deg) brightness(102%) contrast(81%);
+  }
+}
+&:active {
+  background-color: darken(#3a4d53, 10%);
+  background-size: 100%;
+  transition: background-color 0s, background-size 0s;
+  
+}
    
 }
+.monthly-label{
+   margin-top: 15px;
+   color: #819eb0;
+   font-size: 12px;
+   font-weight: 600;
+}
+
                
             
          

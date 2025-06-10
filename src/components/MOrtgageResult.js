@@ -10,8 +10,11 @@ const MortgageResult = () => {
       </p>
       <div className='result-box'>
         <div className='result-nums'>
-          <label className='monthly-label'>Monthly Repayments</label>
-          <result className='monthly-result'></result>
+          <label className='monthly-repay-label'>Your Monthly Repayments</label>
+          <result className='monthly-result'>£1,797.54</result>
+          <div className='divider'></div>
+          <label className='monthly-repay-label'>Total you'll repay over the term</label>
+          <h3 className='total'>£539,322.94</h3>
         </div>
       </div>
       

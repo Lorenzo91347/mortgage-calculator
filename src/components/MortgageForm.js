@@ -46,7 +46,7 @@ const MortgageForm = () => {
       </div>
 
       <div className='mortgage-amount'>
-        <label for='amount' className='amount-label'>Mortage Amount</label>
+        <label for='amount' className='label'>Mortage Amount</label>
         <div className='amount'>
           <i className='icon-top'>£</i>
           <input className='input-field-1' type="text" name="amount"></input>

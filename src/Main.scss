@@ -106,6 +106,7 @@ CHILD CONTAINERS STYLING
 }
 
 .term-rate-field{
+   height: 40px;
    border-radius: 5px;
    border: 1px solid grey;
    display: flex;
@@ -123,7 +124,8 @@ CHILD CONTAINERS STYLING
    border-radius: 2%;
    box-shadow: 0 -5px 0 0 var(--primary-lime);
    .result-nums{
-      padding: 15px;
+      padding: 25px;
+
 
    }
 }
@@ -135,10 +137,10 @@ FIELDS,ICONS AND MIX
 
 
 .icon-top{
-   padding: 8px 15px 8px;
+   height: 100%;
+   padding: 0 15px 0 15px;
    display: flex;
    align-items: center;
-   justify-content: center;
    font-weight:bold;
    color: var(--slate-700);
    background-color: var(--slate-100);
@@ -146,7 +148,8 @@ FIELDS,ICONS AND MIX
    border-bottom-left-radius: 5px;
 }
 .icon{
-   padding: 8px 10px 8px;
+   height: 100%;
+   padding: 0 12px 0 12px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -176,7 +179,7 @@ FIELDS,ICONS AND MIX
    color: #475f67;
 }
 
-.amount-label{
+.label{
    margin-top:15px;
    font-size: 14px;
    color: grey;
@@ -261,11 +264,27 @@ FIELDS,ICONS AND MIX
 }
    
 }
-.monthly-label{
-   margin-top: 15px;
+.monthly-repay-label{
    color: #819eb0;
    font-size: 12px;
    font-weight: 600;
+}
+.monthly-result{
+   margin-top: 5px;
+   margin-bottom: 20px;
+   font-size: 45px;
+   color: var(--primary-lime);
+   display: block;
+   font-weight: bold;
+}
+
+.divider{
+   width: 100%;
+   border: #1c333f 1px solid;
+   margin-bottom: 20px;
+}
+.total{
+   margin-top: 10px;
 }
 
                

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useResult } from '../ResultContext';
 
 
 import CalcLogo from '../icons/icon-calculator.svg';
@@ -13,8 +14,8 @@ const MortgageForm = () => {
   const[interest,setInterest] = useState(0);
   const[repay,setRepay] = useState(false);
   const[intonly,setIntOnly] = useState(false);
-  const[result, setResult] = useState('');
-
+   const { setResult } = useResult();
+   
    const handleRepayChange = (checked) => {
     setRepay(checked);
     if (checked) setIntOnly(false);
@@ -24,20 +25,75 @@ const MortgageForm = () => {
     if (checked) setRepay(false);
   };
 
-  const calculateRepayment = () => {
-  const principal = Number(amount);
-  const years = Number(term);
-  const annualInterestRate = Number(interest);
+  const handleReset = () => {
+  setAmount("");
+  setTerm("");
+  setInterest("");
+  setRepay(false);
+  setIntOnly(false);
+};
 
-  if (principal <= 0 || years <= 0 || annualInterestRate < 0) {
-    return null;
-  }
+  
 
-  const monthlyInterestRate = annualInterestRate / 12 / 100;
-  const totalPayments = years * 12;
+const calculateRepayment = () => {
+  const errors = [];
 
   let monthlyPayment = 0;
   let totalRepayment = 0;
+
+  // Check leading zero
+  const hasLeadingZero = (value) => /^0\d+/.test(value);
+
+  // Validate amount
+  if (!amount) {
+    errors.push("Amount is required.");
+  } else if (hasLeadingZero(amount)) {
+    errors.push("Amount cannot start with 0.");
+  } else if (isNaN(Number(amount))) {
+    errors.push("Amount must be a number.");
+  } else {
+    const principal = Number(amount);
+    if (principal < 100) errors.push("Amount must be at least 3 digits (≥ 100).");
+    if (principal > 1000000) errors.push("Amount must not exceed 1,000,000.");
+  }
+
+  // Validate term
+  if (!term) {
+    errors.push("Term is required.");
+  } else if (hasLeadingZero(term)) {
+    errors.push("Term cannot start with 0.");
+  } else if (isNaN(Number(term)) || Number(term) <= 0) {
+    errors.push("Term must be a valid number greater than 0.");
+  } else if(term.length > 2){
+    errors.push("Term cannot be 3 digits.")
+  }
+
+  // Validate interest
+  if (interest === "") {
+    errors.push("Interest rate is required.");
+  } else if (hasLeadingZero(interest)) {
+    errors.push("Interest rate cannot start with 0.");
+  } else if (isNaN(Number(interest)) || Number(interest) < 0) {
+    errors.push("Interest rate must be a non-negative number.");
+  }
+
+  // Validate repayment type
+  if (!repay && !intonly) {
+    errors.push("Please select a repayment type.");
+  }
+
+  // Show all errors at once if any
+  if (errors.length > 0) {
+    alert(errors.join("\n"));
+    return setResult; // ✅ kept as requested
+  }
+
+  // Proceed with calculation
+  const principal = Number(amount);
+  const years = Number(term);
+  const annualInterestRate = Number(interest);
+  const monthlyInterestRate = annualInterestRate / 12 / 100;
+  const totalPayments = years * 12;
 
   if (repay) {
     const numerator = principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalPayments);
@@ -48,14 +104,15 @@ const MortgageForm = () => {
     monthlyPayment = (principal * annualInterestRate) / 12 / 100;
     totalRepayment = monthlyPayment * totalPayments;
   } else {
-    return null;
+    alert("Please select a repayment type.");
+    return setResult; // ✅ still here
   }
 
   return {
     monthlyPayment: formatCurrency(monthlyPayment),
-    totalRepayment: formatCurrency(totalRepayment)
-    };
+    totalRepayment: formatCurrency(totalRepayment),
   };
+};
   const formatCurrency = (value) => {
   return new Intl.NumberFormat('en-GB', {
     style: 'currency',
@@ -96,7 +153,7 @@ const MortgageForm = () => {
     <div className='mort-form'>
       <div className='form-top'>
         <h2>Mortgage Calculator</h2>
-        <button className='clear'>Clear All</button>
+        <button className='clear' onClick={handleReset}>Clear All</button>
       </div>
 
       <div className='mortgage-amount'>
@@ -146,5 +203,6 @@ const MortgageForm = () => {
     </div>
   )
 }
+
 
 export default MortgageForm;

@@ -1,6 +1,10 @@
 import React from 'react'
+import { useResult } from '../ResultContext';
+
 
 const MortgageResult = () => {
+
+   const { result, setResult } = useResult();
   return (
     <div className='mort-result'>
       <h3>Your Results</h3>
@@ -11,10 +15,10 @@ const MortgageResult = () => {
       <div className='result-box'>
         <div className='result-nums'>
           <label className='monthly-repay-label'>Your Monthly Repayments</label>
-          <result className='monthly-result'>£1,797.54</result>
+          <result className='monthly-result'>{result?.monthlyPayment || '£0.00'}</result>
           <div className='divider'></div>
           <label className='monthly-repay-label'>Total you'll repay over the term</label>
-          <h3 className='total'>£539,322.94</h3>
+          <h3 className='total'>{result?.totalRepayment|| '£0.00'}</h3>
         </div>
       </div>
       

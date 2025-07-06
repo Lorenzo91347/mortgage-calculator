@@ -287,6 +287,22 @@ FIELDS,ICONS AND MIX
    margin-top: 10px;
 }
 
+@media only screen and (max-width: 420px)
+{
+   .mortgage-main{
+      display:block;
+      width: auto;
+      height: auto;
+      border-radius: 0%;
+   }
+   .mort-left{
+      width: auto;
+   }
+   .mort-right{
+      border-radius: 0%;
+   }
+}
+
                
             
          

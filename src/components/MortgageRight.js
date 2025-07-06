@@ -1,4 +1,4 @@
-import MortgageResult from "./MortgageResult";
+import MortgageResult from "./MortgageResult.js";
 
 
 const MortgageRight = () => {

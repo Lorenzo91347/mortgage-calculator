@@ -4,7 +4,7 @@ import { useResult } from '../ResultContext';
 
 const MortgageResult = () => {
 
-   const { result, setResult } = useResult();
+   const { result } = useResult();
   return (
     <div className='mort-result'>
       <h3>Your Results</h3>

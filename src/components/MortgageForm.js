@@ -166,7 +166,7 @@ const calculateRepayment = () => {
       </div>
       <div className='mort-term-rate'>
         <div className='field-box'>
-            <label for='term' className='label'>Mortage Term</label>
+            <label for='term' className='label'>Mortgage Term</label>
             <div className='term-rate-field'>
             <input className='input-field-2' type="text" name="term" value={term}
         onChange={e => setTerm(e.target.value)}></input>

@@ -18,7 +18,7 @@ MAIN CONTAINERS STYLING
 .main-container{
    background-color: var(--slate-100);
    width: 75rem;
-   height: 53.125rem;
+   height: 100vh;
    display: flex;
      align-items: center;
    justify-content: center;
@@ -287,8 +287,15 @@ FIELDS,ICONS AND MIX
    margin-top: 10px;
 }
 
-@media only screen and (max-width: 420px)
+@media only screen and (max-width: 500px)
 {
+   .page{
+      height: auto;
+   }
+   .main-container{
+      width: auto;
+      height:auto;
+   }
    .mortgage-main{
       display:block;
       width: auto;
@@ -297,9 +304,12 @@ FIELDS,ICONS AND MIX
    }
    .mort-left{
       width: auto;
+      padding: 0 10px 0;
+      
    }
    .mort-right{
       border-radius: 0%;
+      width: auto;
    }
 }
 
